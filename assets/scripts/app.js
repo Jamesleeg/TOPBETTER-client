@@ -17,7 +17,7 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
 
-  $('#textsub').on('click', postEvents.onPost)
+  $('#textsub').on('submit', postEvents.onPost)
 
 //   ('#sign-in').show()
 // })

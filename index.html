@@ -17,7 +17,7 @@
       <p>
         <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
         <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+
       </p>
       <div class="row">
         <div class="col">
@@ -60,20 +60,23 @@
      </section> -->
 
    <section id='blog-post'>
-    <div class="mb-3">
+    <form id='textsub'>
+     <div class="mb-3">
      <label for="sport-input" class="form-label">Your Pick</label>
-     <input type="text" class="form-control" id="sport" placeholder="Sport">
+     <input type="text" name='post[sport]' class="form-control" id="sport" placeholder="Sport">
+    </div>
+    <div class="mb-3">
+    <label for="title-input" class="form-label">Title</label>
+    <input type="text" name='post[title]'class="form-control" id="title" placeholder="Title">
    </div>
    <div class="mb-3">
-    <label for="title-input" class="form-label">Title</label>
-    <input type="text" class="form-control" id="title" placeholder="Title">
-  </div>
-   <div class="mb-3">
      <label for="exampleFormControlTextarea1" class="form-label">PICKS & Over/Under</label>
-     <textarea class="form-control" id="body" rows="3"></textarea>
-     <button id='textsub'>SUBMIT</button>
-  </div>
- </section>
+     <textarea class="form-control" name='post[body]' id="body" rows="3"></textarea>
+     <button>SUBMIT</button>
+   </div>
+</form>
+<div id ='post-message'></div>
+</section>
   <footer>
     <section class='auth-hide'>
       <h3> Sign up</h3>
