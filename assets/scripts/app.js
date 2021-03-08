@@ -18,7 +18,10 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
 
   $('#textsub').on('submit', postEvents.onPost)
-
+$('#posts-index').on('click', postEvents.onIndexPost)
+$('#hide-posts-index').on('click', postEvents.onHideIndexPost)
+$('.dyn-update').on('submit', postEvents.onDynamicUpdatePost)
+$('.posts-delete-dynamic').on('click', postEvents.onDynamicDestroyPost)
 //   ('#sign-in').show()
 // })
 })
