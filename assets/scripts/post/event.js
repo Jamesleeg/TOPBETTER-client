@@ -26,35 +26,35 @@ const onIndexPost = function () {
   $('#posts-display').hide()
     }
     // Handle clicking the dynamic destroy buttons
-const onDynamicDestroyPost = function (event) {
-  // event.target is the delete button that was clicked on
-  const deleteButton = event.target
-console.log('deleted')
-  // Extract the id from the delete button that was clicked on's data-id attribute
-  const id = $(deleteButton).data('id')
+const onDynamicDestroyPost = function () {
 
-  // make API call for deleting one book with the data we grabbed from the form
+  const deleteButton = event.target
+
+  const id = $(deleteButton).data('id')
+  console.log('id is:', id)
+
+
   api.destroy(id)
 
-    // if the API call is successful then invoke the onDetroySuccess function
+
     .then(ui.onDestroySuccess)
 
-    // if the API call fails then run our onError function
+
     .catch(ui.onError)
 }
 
 
-const onDynamicUpdatePost = function (event) {
+const onDynamicUpdatePost = function () {
 
   event.preventDefault()
 
 
+  const formData = getFormFields(event.target)
   const updateForm = event.target
 
 
   const id = $(updateForm).data('id')
-
-  const formData = getFormFields(event.target)
+  console.log('formData is:', formData)
 
 
   api.updatePost(id, formData)

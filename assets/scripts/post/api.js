@@ -15,14 +15,14 @@ const newPost = function (data) {
 
 
 }
-const updatePost = function (data) {
+const updatePost = function (postId, postData) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/posts/' + req.params.id,
+    url: config.apiUrl + '/posts/' + postId,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    data: data
+    data: postData
   })
 }
 const getPosts = function () {
@@ -38,8 +38,11 @@ const getPosts = function () {
 }
 const destroy = function (id) {
   return $.ajax({
-    url: config.apiUrl + '/books/' + id,
-    method: 'DELETE'
+    url: config.apiUrl + '/posts/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer ` + store.user.token
+    }
   })
 }
 module.exports = {
