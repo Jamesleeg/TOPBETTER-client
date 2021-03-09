@@ -53,7 +53,27 @@ console.log('failedindex')
 }
 const onUpdateSuccess = function (responseData) {
 
-  $('#post-message').html('You successfully updated the book')
+  $('#post-message').html('You successfully updated the post')
+
+
+  $('#post-display').html('posts have changed! Click "Get All Post" again to see all the posts.')
+
+
+  $('#post-message').addClass('success')
+
+
+  setTimeout(() => {
+    $('#post-message').html('')
+    $('#post-message').removeClass('success')
+  }, 5000)
+
+  // reset all forms
+  $('form').trigger('reset')
+  $('#posts-display').hide()
+}
+const onDestroySuccess = function (responseData) {
+
+  $('#post-message').html('You successfully deleted the post')
 
 
   $('#post-display').html('posts have changed! Click "Get All Post" again to see all the posts.')
@@ -94,5 +114,6 @@ module.exports = {
   onIndexSuccess,
   onIndexFailure,
   onError,
-  onUpdateSuccess
+  onUpdateSuccess,
+  onDestroySuccess
 }
