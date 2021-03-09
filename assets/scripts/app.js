@@ -10,7 +10,9 @@
 const authEvents = require('./auth/event')
  const postEvents = require('./post/event')
 $(() => {
-
+  $('#posts-index').hide()
+  $('#hide-posts-index').hide()
+  $('#blog-post').hide()
   $('.change-password-section').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)

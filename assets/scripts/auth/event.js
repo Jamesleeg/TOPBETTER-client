@@ -30,6 +30,9 @@ const onSignIn = function (event) {
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
+    $('#blog-post').show()
+    $('#hide-posts-index').show()
+    $('#posts-index').show()
 }
 
 const onSignOut = function (event) {
