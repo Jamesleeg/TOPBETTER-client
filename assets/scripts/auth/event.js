@@ -41,6 +41,10 @@ const onSignOut = function (event) {
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
+    $('#blog-post').hide()
+    $('#hide-posts-index').hide()
+    $('#posts-index').hide()
+
 }
 
 const onChangePassword = function (event) {
