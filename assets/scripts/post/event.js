@@ -5,7 +5,7 @@ const ui = require('./ui')
 const getFormFields = require('../../../lib/get-form-fields')
 
 const onPost = function (event) {
-  console.log(event)
+  // console.log(event)
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
@@ -31,7 +31,7 @@ const onDynamicDestroyPost = function () {
   const deleteButton = event.target
 
   const id = $(deleteButton).data('id')
-  console.log('id is:', id)
+  // console.log('id is:', id)
 
 
   api.destroy(id)
@@ -54,7 +54,7 @@ const onDynamicUpdatePost = function () {
 
 
   const id = $(updateForm).data('id')
-  console.log('formData is:', formData)
+  // console.log('formData is:', formData)
 
 
   api.updatePost(id, formData)

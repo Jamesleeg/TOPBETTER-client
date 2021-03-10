@@ -6,8 +6,8 @@ const getFormFields = require('../../../lib/get-form-fields')
 
 const onNewPostSuccess = function(response) {
   $('form').trigger('reset')
-  console.log('onNewPostSuccess')
-  console.log(response)
+  // console.log('onNewPostSuccess')
+  // console.log(response)
   $('#post-message').html('successfully made your post')
 }
 const onNewPostFailure = function(response) {
@@ -17,7 +17,7 @@ const onNewPostFailure = function(response) {
 const onIndexSuccess = function (responseData) {
 
   const posts = responseData
-  console.log(responseData)
+  // console.log(responseData)
 
 
   let postsHtml = ''
@@ -49,7 +49,7 @@ const onIndexSuccess = function (responseData) {
 }
 
 const onIndexFailure = function () {
-console.log('failedindex')
+// console.log('failedindex')
 }
 const onUpdateSuccess = function (responseData) {
 
