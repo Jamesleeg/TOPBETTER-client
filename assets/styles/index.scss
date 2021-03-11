@@ -39,10 +39,11 @@ body {
 }
 
 .sign {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 200px;
   width: 50%;
   height: 50%;
   background-image: radial-gradient(
