@@ -42,7 +42,7 @@ const signOutSuccess = function (response) {
   $('#sign-out').hide()
 
   $('.change-password-section').hide()
-  console.log('signOutSuccess ran and nothing was returned!')
+  // console.log('signOutSuccess ran and nothing was returned!')
   store.user = null
   $('.auth-hide').show()
 }
@@ -54,7 +54,7 @@ const signOutFailure = function (response) {
     $('#error-message').text('')
   }, 5000)
 
-  console.log('signOutFailure ran')
+  // console.log('signOutFailure ran')
 }
 
 const changePasswordSuccess = function (response) {

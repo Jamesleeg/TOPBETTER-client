@@ -15,14 +15,14 @@ const onSignUp = function (event) {
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
-  console.log('hello we did it')
+  // console.log('hello we did it')
 }
 
 const onSignIn = function (event) {
   // $("#games-index").show()
   // $("#new-game").show()
   event.preventDefault()
-  console.log('yeahboy')
+  // console.log('yeahboy')
   // get data from html form
   const form = event.target
   const data = getFormFields(form)
@@ -37,7 +37,7 @@ const onSignIn = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  console.log('sign out ran')
+  // console.log('sign out ran')
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
@@ -52,7 +52,7 @@ const onChangePassword = function (event) {
   // get data from html form
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
+  // console.log(data)
   // send data to api for sign up
   api.changePassword(data)
     .then(ui.changePasswordSuccess)

@@ -27,7 +27,7 @@ const updatePost = function (postId, postData) {
 }
 const getPosts = function () {
 
-  console.log('posts')
+  // console.log('posts')
   return $.ajax({
     url: `${config.apiUrl}/posts`,
     method: 'GET',
