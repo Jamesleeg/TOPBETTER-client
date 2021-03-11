@@ -21,11 +21,11 @@ I have followed a timeline that I set for myself to achieve specific goals. I ma
 • A user  will be able to sign-out
 
 ## Technologies Used
-HTML5
-CSS/SASS
-JavaScript
-Ajax
-jQuery
+• HTML5
+• CSS/SASS
+• JavaScript
+• Ajax
+• jQuery
 
 ## Unsolved
 • Display multiple users and pics
