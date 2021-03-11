@@ -31,6 +31,11 @@ jQuery
 • Display multiple users and pics
 • win/loss ratio
 
+
+
+
+
+
 ![wireframe 24 26 PM](https://user-images.githubusercontent.com/77414849/110857394-d1156180-8286-11eb-9dfc-f5db1c2579f6.png)
 
 ![erd](https://user-images.githubusercontent.com/77414849/110857534-f99d5b80-8286-11eb-8236-434b9c6b8e2c.png)
