@@ -9,10 +9,19 @@ const onNewPostSuccess = function(response) {
   // console.log('onNewPostSuccess')
   // console.log(response)
   $('#post-message').html('successfully made your post')
+  setTimeout(() => {
+    $('#post-message').html('')
+
+  }, 5000)
+
 }
 const onNewPostFailure = function(response) {
   $('form').trigger('reset')
   $('#post-message').html('Error making post')
+  setTimeout(() => {
+    $('#post-message').html('')
+
+  }, 5000)
 }
 const onIndexSuccess = function (responseData) {
 
@@ -21,31 +30,43 @@ const onIndexSuccess = function (responseData) {
 
 
   let postsHtml = ''
+  if (posts.length === 0) {
+    postsHtml = 'No Picks Yet!'
 
-  posts.forEach(post => {
+  } else {
+    posts.forEach(post => {
 
-    postsHtml += `
-  <p>ID: ${post._id}</p>
-     <h4>Created: ${post.createdAt}</h4>
-     <h4>Sport: ${post.sport}</h4>
-     <h4>Title: ${post.title}</h4>
-     <h4>Body: ${post.body}</h4>
-     <form class='post-update-dynamic' data-id=${post._id}>
-     <input type='text' name='post[sport]' placeholder='Enter Sport Here' required>
-     <input type='text' name='post[title]' placeholder='Enter Title Here' required>
-     <input type='text' name='post[body]' placeholder='Enter Body Here' required>
-     <button type='submit'>Update Post</button>
-     </form>
-     <button class='post-delete-dynamic' data-id=${post._id}>
-     Delete Post
-     </button>
+      postsHtml += `
+      <p>ID: ${post._id}</p>
+      <h4>Created: ${post.createdAt}</h4>
+      <h4>Sport: ${post.sport}</h4>
+      <h4>Title: ${post.title}</h4>
+      <h4>Body: ${post.body}</h4>
+      <form class='post-update-dynamic' data-id=${post._id}>
+      <input type='text' name='post[sport]' placeholder='Enter Sport Here' required>
+      <input type='text' name='post[title]' placeholder='Enter Title Here' required>
+      <input type='text' name='post[body]' placeholder='Enter Body Here' required>
+      <button type='submit'>Update Post</button>
+      </form>
+      <button class='post-delete-dynamic' data-id=${post._id}>
+      Delete Post
+      </button>
 
-   `
-  })
+      `
+    })
+
+  }
+
 
   $('#posts-display').html(postsHtml)
 
   $('#posts-display').show()
+  // if ($('#post-display').html() === '') {
+  //   $('#post-display').html('No Picks Have Been Submitted!')
+  //   setTimeout(() => {
+  //     $('#post-display').html('')
+  //   }, 5000)
+  // }
 }
 
 const onIndexFailure = function () {
