@@ -32,6 +32,10 @@ const onIndexSuccess = function (responseData) {
   let postsHtml = ''
   if (posts.length === 0) {
     postsHtml = 'No Picks Yet!'
+    setTimeout(() => {
+      $('#post-message').html('')
+
+    }, 5000)
 
   } else {
     posts.forEach(post => {
