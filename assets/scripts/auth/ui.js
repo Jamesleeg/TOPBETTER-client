@@ -22,7 +22,9 @@ const signInSuccess = function (response) {
   $('.auth-hide').hide()
   $('#sign-in').hide()
   $('#sign-out').show()
-
+  $('#blog-post').show()
+  $('#hide-posts-index').show()
+  $('#posts-index').show()
   setTimeout(() => {
     $('#error-message').text('')
   }, 5000)

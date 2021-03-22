@@ -33,7 +33,7 @@ const onIndexSuccess = function (responseData) {
   if (posts.length === 0) {
     postsHtml = 'No Picks Yet!'
     setTimeout(() => {
-      $('#post-message').html('')
+      $(postsHtml).html('')
 
     }, 5000)
 
